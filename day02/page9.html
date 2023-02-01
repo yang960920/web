@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a{
+            text-decoration: none;
+        }
+        li{
+            list-style: none;
+            float: left;
+            /* padding 는 각 주석을 어느정도 띄울 것이냐 */
+            padding: 15px;
+            width: 70px;
+            height: 20px;
+            text-align: center;
+        }
+        a:hover {
+            background: red;
+        }
+        /* li:nth-child(짝수번째) li중에서도 짝수번째 */
+        li:nth-child(2n){
+            background: orange;
+        }
+
+        /* li:nth-child(홀수번째) li중에서도 홀수번째 */
+        li:nth-child(2n+1){
+            background: yellow;
+        }
+        /* li:first-child(제일첫번째) li중에서도 첫번째 */
+        li:first-child{
+            border-radius: 50px 0 0 50px;
+        }
+        /* li:nth-child(마지막) li중에서도 마지막째 */
+        li:last-child{
+            border-radius: 0 50px 50px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- ul 은 순서 없는 목록 -->
+    <ul>
+        <li>
+            <a href="page1.html">회원가입</a>
+        </li>
+        <li>
+            <a href="page2.html">제품정보</a>
+        </li>
+        <li>
+            <a href="page3.html">게시판</a>
+        </li>
+        <li>
+            <a href="page4.html">장바구니</a>
+        </li>
+    </ul>
+</body>
+</html>

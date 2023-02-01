@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- 문법의 관계가 얽히거나 끊기면 안됨 -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>네이버 메일 페이지</title>
+    <link rel="stylesheet" href="out.css">
+
+    <!-- style 의 길이가 길어진다면 외부 링크 css 로 만들어서 링크로 달아도 된다. -->
+
+    <!-- a 태그가 연결에 쓰이는거라 width 와 height 의 적용을 하려면
+        display : 가로세로가 있는 블록 형태로 보고싶다 = inline-block 입력.  -->
+    <style>
+        a { /* 기본선택자 -- 태그명 */
+            color: white; 
+            width: 200px;  
+            height: 100px; 
+            background: pink;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body >
+    <!-- a href="" 앵커 태그로 "링크"를 클릭하면 인입됨.-->
+    
+    <!-- style 내에 width height 의 단위는 px 이다 
+        hr 자체는 width와 height는 안에서 단위가 없어도 되지만 
+        최근엔 css로 전부 통합하는걸 선호함. -->
+
+    <a href="mail.html">mail페이지로</a>
+    <a href="cafe.html">cafe페이지로</a>
+    <a href="news.html">news페이지로</a>
+    <hr color="pink" style="width: 300px;">
+    네이버 메일 페이지입니다.
+    <hr color="blue">
+</body>
+</html>
