@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // height = 187.7
+        // weight = 55
+        // result = height - weight
+        // alert('키에서 몸무게를 뺀 값은 ' + result + ' 입니다')
+        
+        height = prompt('당신의 키를 입력하세요.')
+        weight = prompt('당신의 몸무게를 입력하세요.')
+        // 숫자로 바꾸어줍시다.!! ==> 부품이 필요!!
+        
+        // result = parseInt(height) + parseInt(weight)
+        // pasrseInt 는 Ins가 정수 Pasres 분석해서 바꿔라 
+
+        result = parseFloat(height) + parseFloat(weight)
+        // 3.3 = 1.1 + 2.2 ==> 3.3000000003
+        // 이유는 컴퓨터는 +연산만 가능! , 부품을 이용해서 -를 하는것
+
+        // result = height - weight
+        alert('키에서 몸무게를 뺀 값은 ' + result + ' 입니다')
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
