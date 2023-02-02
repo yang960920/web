@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function pwCheck() {
+            if (pw2 == pw3) {
+                result = '패스워드동일'
+            } else {
+                result = '패스워드틀림'
+            }
+        }
+        function idCheck() {
+        // 1. id가 id2인 input 태그의 value 값을 가지고 와야한다.
+        id2_value = document.getElementById('id2').value // 접근 연산자.
+        // 2. 글자길이 (length) 를 구합니다
+        size = id2_value.length
+        alert(size)
+        // 3. 5글자 미만이면(if) 오류 메시지를 뿌려준다.
+        if (size < 5) {
+            div_tag = document.getElementById('result')
+            div_tag.innerHTML = "<font color=red>5글자미만이므로 가입불가</font>"
+        }else{
+            div_tag.innerHTML = "<font color=blue>5글자이상이므로 가입가능</font>"
+        }
+        
+            // idTag = document.ElementById('id2');
+            // idValue = idTag.value;
+            // alert('id is >>' + idValue)
+            // alert('id 길이>>' + idValue.length);
+        }
+        function hi() {
+            alert('여러분~~~ 2시간이 끝나요!! 힘내세요!!')
+        }
+        function bye() {
+            alert('드디어 끝났어요!!! 안녕히가세요.@@')
+        }
+        function idCheck() {
+            id2 = document.getElementById('id2').value
+            alert(id2.length)
+        }
+            function check() {
+            id = "root"
+            pw = "1234"
+            id2 = document.getElementById('id2').value //"root"
+            pw2 = document.getElementById('pw1').value //"1234"
+            //id2가 id와 일치, pw2가 pw와 일치 둘다 만족하면
+            //(and조건, &&, 앤퍼센트)
+            //alert("로그인 성공!!!"), 아니면 alert("로그인 실패!!!")
+            result = document.getElementById('result')
+            if (id == id2 && pw == pw2) {
+                // alert("로그인 성공!!!")
+                // result안에 오른쪽에 있는 내용을
+                // html 코드로 안쪽에 집어 넣는다.
+                result.innerHTML = "<font color=red>로그인 성공!!!</font> <img src='ok.jpg' width=100 height=100>"
+            } else {
+                // alert("로그인 실패!!!")
+                result.innerHTML = "<font color=blue>로그인 실패!!!</font> <img src='no.png' width=100 height=100>"
+            }
+        }
+    </script>
+</head>
+<body>
+    아이디 : <input type="text" id="id2" value="root"> 
+    <button onclick="idCheck()">글자수 체크</button> <br>
+    <hr color="red">
+    패스워드 : <input type="text" id="pw1" value="1234"> <br>
+    패스워드2 : <input type="text" id="pw2" value="1234">
+    <button onclick="pwCheck()">pw동일여부 체크</button> <br>
+    <div id="result">
+.
+    </div>
