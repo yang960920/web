@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Menu - Default functionality</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#menu" ).menu();
+  } );
+  </script>
+  <style>
+  .ui-menu { width: 150px; }
+  </style>
+</head>
+<body>
+ 
+<ul id="menu">
+  <li class="ui-state-disabled"><div>장르 (n/a)</div></li>
+  <li><div>SF</div></li>
+  <li><div>캐주얼</div></li>
+  <li><div>RPG</div>
+    <ul>
+      <li class="ui-state-disabled"><div>중분류</div></li>
+      <li><div>SEGA</div></li>
+      <li><div>반다이</div></li>
+    </ul>
+  </li>
+  <li><div>인디</div></li>
+  <li><div>Music</div>
+    <ul>
+      <li><div>Rock</div>
+        <ul>
+          <li><div>AnimationOST</div></li>
+          <li><div>Classic</div></li>
+        </ul>
+      </li>
+      <li><div>K-Pop</div>
+        <ul>
+          <li><div>I've</div></li>
+          <li><div>Lesserafim</div></li>
+          <li><div>Aespa</div></li>
+        </ul>
+      </li>
+      <li><div>Pop</div></li>
+    </ul>
+  </li>
+  <li class="ui-state-disabled"><div>Specials (n/a)</div></li>
+</ul>
+ 
+ 
+</body>
+</html>

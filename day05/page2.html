@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function tour() {
+            
+        // 1.입력한 값 가지고 오기 body에서 가져와야하니 document
+        space_value = document.getElementById('space').value
+        month_value = document.getElementById('month').value
+        choice_value = document.getElementById('choice').value
+        
+        // 2.처리-결제금액 계산해주기
+       let method = ''
+       let money = 0 
+        if (choice =='1') {
+            method = '비행기'
+            money = 30000
+        } else if (choice =='2') {
+            method = '버스'
+            money = 10000
+        } else {
+            method = '자가용'
+            money = 50000
+        }
+        
+
+        text = '여행가고 싶은 곳은 '+ space_value + '이고, ' 
+        + month_value + '월에 ' 
+        + method + '를 타고 갈겁니다 비용은 '
+        + money + "원 입니다."
+        // 3.출력-결과를 출력
+        result_tag = document.getElementById('result')
+        result_tag.innerHTML = text
+    }
+    </script>
+</head>
+
+<body>
+    여행가고 싶은 곳: <input type="text" value="부산" id="space"> <br>
+    몇월에 갈까요: <input type="text" value="1" id="month"> <br>
+    뭘 타고 갈까요: 1)비행기(30000), 2)버스(10000), 3)자가용(50000)
+    <input type="text" value="0" id="choice"> <br>
+    <button onclick="tour()">여행 계획 완료</button>
+    <div id="result">
+
+        <font color=red>글자....</font>
+    </div>
+</body>
+
+</html>
