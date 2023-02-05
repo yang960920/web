@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* input:disabled {
+            background-color: gray;
+        }
+        input:focus {
+            background-color: green;
+        }
+        button:hover {
+            color: red;
+            background-color: aqua;
+            font-weight: bold;
+        } */
+        input[type=text] {
+            background: red;
+            color: white;
+            font-size: 30px;
+        } 
+        input[type=password] {
+            background: greenyellow;
+            color: blue;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    아이디 : <input type="text" name="user" disabled value="apple">
+    <br>
+    패스워드 : <input type="password" name="pass"> <br>
+    <button>로그인</button>
+</body>
+</html>
